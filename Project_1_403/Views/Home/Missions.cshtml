@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "Missions";
+}
+
+<h2>Which mission would you like to learn about: </h2>
+<!--<form method="POST" action="/Home/MissionFAQ?mission=@ViewBag.MissionName">
+    <select name="mission">
+        <option id="mission" name="mission" value="Alabama">Alabama Birmingham</option>
+        <option id="mission" name="mission" value="Los Angeles">California Los Angeles</option>
+        <option id="mission" name="mission" value="Tallahassee">Tallahassee Florida</option>
+        <option><a href="~/Home/MissionFAQ?mission=Alabama">Alabama Birmingham</a></option>
+    </select>
+    <br><br>
+    <input type="submit">
+
+</form>-->
+
+<!--Dropdown list-->
+<div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+        Select a Mission
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+        <li><a href="~/Home/MissionFAQ?mission=Alabama">Alabama Birmingham</a></li>
+        <li><a href="~/Home/MissionFAQ?mission=Tallahassee">Florida Tallahassee</a></li>
+        <li><a href="~/Home/MissionFAQ?mission=Los Angeles">California Los Angeles</a></li>
+    </ul>
+</div>
+
+    <!--Old display stuff
+        <h1>@ViewBag.MissionName</h1>
+                @ViewBag.MissionPresident
+                @ViewBag.MissionStreetAddress
+                @ViewBag.MissionRestofAddress
+                @ViewBag.MissionLanguage
+                @ViewBag.MissionClimate
+                @ViewBag.MissionReligion
+                @ViewBag.MissionFlag-->

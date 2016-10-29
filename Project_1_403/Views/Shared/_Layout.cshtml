@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title Missionary FAQ</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Mission", "Missions", "Home")</li>
+                    <li>@Html.ActionLink("About Us", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                </ul>
+                <!--@Html.Partial("_LoginPartial")-->
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+
+        <div class="jumbotron" style="background-image: url(http://www.easterngate.org/WordPress/wp-content/uploads/2013/03/wheat-field-wallpapers_banner.jpg);background-size: 100%;">
+            <div style="  padding: 10px;
+  Background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid black;">
+                <h1>Ye Elders and Sisters</h1>
+            <p><i>For behold the field is white, already to harvest.</i></p>
+                <button class="btn btn-info">Ask your gospel questions here!</button>
+            </div></div>
+
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - LDS Missions</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

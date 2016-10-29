@@ -1,0 +1,106 @@
+﻿@{
+    ViewBag.Title = "MissionFAQ";
+}
+<!--Breradcrumb Navigation-->
+<ol class="breadcrumb">
+    <li><a href="/Home/">Home</a></li>
+    <li><a href="/Home/Missions">Missions</a></li>
+    <li class="active">Mission FAQ's</li>
+</ol>
+
+<!--------------------------------Mission info and image----------------------------------->
+
+<div class="row">
+    <div class="col-sm-6">
+        <h1>@ViewBag.MissionName</h1>
+        <ul class="missioninfo" style="list-style-type: none;">
+            <li><p>Mission President: @ViewBag.MissionPresident</p></li>
+            <li><p>Mission Address: @ViewBag.MissionStreetAddress<br />@ViewBag.MissionRestofAddress</p></li>
+            <li><p>Mission Language: @ViewBag.MissionLanguage</p></li>
+            <li><p>Mission Climate: @ViewBag.MissionClimate</p></li>
+            <!--<a href="@ViewBag.WeatherURL" class="aw-widget-legal">
+            </a>
+            <div id="awcc1477604458761" class="aw-widget-current" data-locationkey="346630" data-unit="f" data-language="en-us" data-useip="false" data-uid="awcc1477604458761"></div>
+            <script type="text/javascript" src="http://oap.accuweather.com/launch.js"></script>-->
+            <p>Predominant Religion: @ViewBag.MissionReligion</p>
+        </ul>
+    </div>
+    <div class="col-sm-6">
+        <img src="@ViewBag.MissionFlag" class="flag" />
+    </div>
+</div>
+
+<!---------------------Mission FAQ Section-------------------------------->
+
+<h2>Mission FAQ's</h2>
+<hr />
+<div class="row">
+    <div class="col-sm-6">
+        <div class="qa">
+            <p class="question">What kind of clothes do I need?</p>
+            <p class="answer">Clothes that are good</p>
+            <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#q1">Reply</button>
+
+            <div id="q1" class="collapse">
+                <form method="Post" action="~/Home/MissionFAQ?mission=@ViewBag.MissionCode">
+                    <textarea></textarea>
+                    <input class="btn btn-info" id="display" name="display" type="submit" value="Submit" />
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+    @ViewBag.hide
+    <div class="col-sm-6">
+        <div class="qa">
+            <p class="question">What is the food like?</p>
+            <p class="answer">Fried and Delicious</p>
+            <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#q2">Reply</button>
+
+            <div id="q2" class="collapse">
+                <form method="Post" action="~/Home/MissionFAQ?mission=@ViewBag.MissionCode">
+                    <textarea></textarea>
+                    <input class="btn btn-info" id="display" name="display" type="submit" value="Submit" />
+                </form></div>
+
+        </div>
+    </div>
+</div>
+<br />
+
+    
+<div class="row">
+    <div class="col-sm-6">
+        <div class="qa">
+            <p class="question">What was the weirdest thing they fed you?</p>
+            <p class="answer">Chitlins.  They are basically boiled pig intestines.  They smell like what they are.</p>
+            <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#q3">Reply</button>
+            <div id="q3" class="collapse">
+                <form method="Post" action="~/Home/MissionFAQ?mission=@ViewBag.MissionCode">
+                    <textarea></textarea>
+                    <input class="btn btn-info" id="display" name="display" type="submit" value="Submit" />
+                </form></div>
+            </div>
+    </div>
+
+    <div class="col-sm-6">
+        <div class="qa">
+            <p class="question">What kind of clothes do I need?</p>
+            <p class="answer">Clothes that are good</p>
+            <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#q4">Reply</button>
+            <div id="q4" class="collapse">
+                <form method="Post" action="~/Home/MissionFAQ?mission=@ViewBag.MissionCode">
+                    <textarea></textarea>
+                    <input class="btn btn-info" id="display" name="display" type="submit" value="Submit" />
+                </form></div>
+            </div>
+    </div>
+</div>
+<br />
+
+<h3>What questions do you have?</h3>
+<form method="post" action="~/Home/MissionFAQ?mission=@ViewBag.MissionCode">
+    <textarea name="question" form="userform">Please enter your question.</textarea>
+    <input class="btn btn-info" type="submit" value="Submit" />
+</form>

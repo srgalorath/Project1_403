@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<div style="display: @ViewBag.hide">
+
+    <form>
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                Select a Mission
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="~/Home/MissionFAQ?mission=Alabama">Alabama Birmingham</a></li>
+                <li><a href="~/Home/MissionFAQ?mission=Tallahassee">Florida Tallahassee</a></li>
+                <li><a href="~/Home/MissionFAQ?mission=Los Angeles">California Los Angeles</a></li>
+            </ul>
+        </div>
+    </form>
+</div>
